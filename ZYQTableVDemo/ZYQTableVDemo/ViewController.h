@@ -8,9 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "ZYQTableView.h"
+#import "SRRefreshView.h"
 
-@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ZYQTableViewDelegate,UIScrollViewDelegate>{
+@interface ViewController : UIViewController<UITableViewDelegate,UITableViewDataSource,ZYQTableViewDelegate,UIScrollViewDelegate,SRRefreshDelegate>{
     NSMutableArray *items;
     ZYQTableView *tableV;
+    SRRefreshView   *_slimeView;
+
 }
 @end

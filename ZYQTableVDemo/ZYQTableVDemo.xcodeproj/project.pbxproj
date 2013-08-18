@@ -22,6 +22,11 @@
 		D83C838416E50D4A0065BEEB /* DemoTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83C838316E50D4A0065BEEB /* DemoTableHeaderView.xib */; };
 		D83C838716E50F850065BEEB /* DemoTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C838616E50F850065BEEB /* DemoTableFooterView.m */; };
 		D83C838A16E50FB60065BEEB /* DemoTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */; };
+		D88DC33217C14A0D0007F19E /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D88DC32B17C14A0D0007F19E /* sr_refresh.png */; };
+		D88DC33317C14A0D0007F19E /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */; };
+		D88DC33417C14A0D0007F19E /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DC32F17C14A0D0007F19E /* SRRefreshView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D88DC33517C14A0D0007F19E /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DC33117C14A0D0007F19E /* SRSlimeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D88DC33717C14A3C0007F19E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88DC33617C14A3C0007F19E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +53,14 @@
 		D83C838616E50F850065BEEB /* DemoTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableFooterView.m; sourceTree = "<group>"; };
 		D83C838816E50FB60065BEEB /* DemoTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableHeaderView.h; sourceTree = "<group>"; };
 		D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableHeaderView.m; sourceTree = "<group>"; };
+		D88DC32B17C14A0D0007F19E /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
+		D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
+		D88DC32D17C14A0D0007F19E /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
+		D88DC32E17C14A0D0007F19E /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
+		D88DC32F17C14A0D0007F19E /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
+		D88DC33017C14A0D0007F19E /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
+		D88DC33117C14A0D0007F19E /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
+		D88DC33617C14A3C0007F19E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D88DC33717C14A3C0007F19E /* QuartzCore.framework in Frameworks */,
 				D83C835916E506950065BEEB /* UIKit.framework in Frameworks */,
 				D83C835B16E506950065BEEB /* Foundation.framework in Frameworks */,
 				D83C835D16E506950065BEEB /* CoreGraphics.framework in Frameworks */,
@@ -67,6 +81,7 @@
 		D83C834C16E506950065BEEB = {
 			isa = PBXGroup;
 			children = (
+				D88DC33617C14A3C0007F19E /* QuartzCore.framework */,
 				D83C835E16E506950065BEEB /* ZYQTableVDemo */,
 				D83C835716E506950065BEEB /* Frameworks */,
 				D83C835616E506950065BEEB /* Products */,
@@ -96,11 +111,12 @@
 			children = (
 				D83C836716E506950065BEEB /* AppDelegate.h */,
 				D83C836816E506950065BEEB /* AppDelegate.m */,
-				D83C835F16E506950065BEEB /* Supporting Files */,
+				D88DC32A17C14A0D0007F19E /* SlimeRefresh */,
 				D83C837516E506AB0065BEEB /* ViewController.h */,
 				D83C837616E506AB0065BEEB /* ViewController.m */,
 				D83C837816E507C00065BEEB /* ZYQTableView.h */,
 				D83C837916E507C00065BEEB /* ZYQTableView.m */,
+				D83C835F16E506950065BEEB /* Supporting Files */,
 			);
 			path = ZYQTableVDemo;
 			sourceTree = "<group>";
@@ -123,6 +139,20 @@
 				D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D88DC32A17C14A0D0007F19E /* SlimeRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				D88DC32B17C14A0D0007F19E /* sr_refresh.png */,
+				D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */,
+				D88DC32D17C14A0D0007F19E /* SRDefine.h */,
+				D88DC32E17C14A0D0007F19E /* SRRefreshView.h */,
+				D88DC32F17C14A0D0007F19E /* SRRefreshView.m */,
+				D88DC33017C14A0D0007F19E /* SRSlimeView.h */,
+				D88DC33117C14A0D0007F19E /* SRSlimeView.m */,
+			);
+			path = SlimeRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,6 +212,8 @@
 				D83C836F16E506950065BEEB /* Default-568h@2x.png in Resources */,
 				D83C838216E50CA60065BEEB /* DemoTableFooterView.xib in Resources */,
 				D83C838416E50D4A0065BEEB /* DemoTableHeaderView.xib in Resources */,
+				D88DC33217C14A0D0007F19E /* sr_refresh.png in Resources */,
+				D88DC33317C14A0D0007F19E /* sr_refresh@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +230,8 @@
 				D83C837A16E507C00065BEEB /* ZYQTableView.m in Sources */,
 				D83C838716E50F850065BEEB /* DemoTableFooterView.m in Sources */,
 				D83C838A16E50FB60065BEEB /* DemoTableHeaderView.m in Sources */,
+				D88DC33417C14A0D0007F19E /* SRRefreshView.m in Sources */,
+				D88DC33517C14A0D0007F19E /* SRSlimeView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

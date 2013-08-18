@@ -40,24 +40,37 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor redColor];
-    tableV=[[ZYQTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 480)];
+    tableV=[[ZYQTableView alloc] initWithFrame:CGRectMake(0, 0, 320, 400)];
     tableV.delegate=self;
     tableV.dataSource=self;
     tableV.pdelegate=self;
+    tableV.pullToRefreshEnabled=NO;
     [self.view addSubview:tableV];
     
     
     [tableV setBackgroundColor:[UIColor lightGrayColor]];
     
     // set the custom view for "pull to refresh". See DemoTableHeaderView.xib.
-    DemoTableHeaderView *headerView = (DemoTableHeaderView *)[[[NSBundle mainBundle] loadNibNamed:@"DemoTableHeaderView" owner:self options:nil] objectAtIndex:0];
-    tableV.headerView = headerView;
+//    DemoTableHeaderView *headerView = (DemoTableHeaderView *)[[[NSBundle mainBundle] loadNibNamed:@"DemoTableHeaderView" owner:self options:nil] objectAtIndex:0];
+    tableV.headerView = nil;
     
     // set the custom view for "load more". See DemoTableFooterView.xib.
 //    nib = [[NSBundle mainBundle] loadNibNamed:@"DemoTableFooterView" owner:self options:nil];
     DemoTableFooterView *footerView = (DemoTableFooterView *)[[[NSBundle mainBundle] loadNibNamed:@"DemoTableFooterView" owner:self options:nil] objectAtIndex:0];
     tableV.footerView = footerView;
     
+    _slimeView = [[SRRefreshView alloc] init];
+    _slimeView.delegate = self;
+    //        _slimeView.upInset = 44;
+    _slimeView.slimeMissWhenGoingBack = YES;
+    _slimeView.slime.bodyColor = [UIColor colorWithRed:0.6 green:0.6 blue:0.6 alpha:1];
+    _slimeView.slime.skinColor = [UIColor whiteColor];
+    _slimeView.slime.lineWith = 1;
+    _slimeView.slime.shadowBlur = 4;
+    _slimeView.slime.shadowColor = _slimeView.slime.bodyColor;
+    
+    [tableV addSubview:_slimeView];
+
     // add sample items
     items = [[NSMutableArray alloc] init];
     for (int i = 0; i < 10; i++)
@@ -73,9 +86,9 @@
 {
     
     // do custom handling for the header view
-    DemoTableHeaderView *hv = (DemoTableHeaderView *)tableV.headerView;
-    [hv.activityIndicator startAnimating];
-    hv.title.text = @"加载中...";
+//    DemoTableHeaderView *hv = (DemoTableHeaderView *)tableV.headerView;
+//    [hv.activityIndicator startAnimating];
+//    hv.title.text = @"加载中...";
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -83,7 +96,7 @@
 {
     
     // do custom handling for the header view
-    [[(DemoTableHeaderView *)tableV.headerView activityIndicator] stopAnimating];
+//    [[(DemoTableHeaderView *)tableV.headerView activityIndicator] stopAnimating];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -92,11 +105,11 @@
 //
 - (void) headerViewDidScroll:(BOOL)willRefreshOnRelease scrollView:(UIScrollView *)scrollView
 {
-    DemoTableHeaderView *hv = (DemoTableHeaderView *)tableV.headerView;
-    if (willRefreshOnRelease)
-        hv.title.text = @"释放刷新...";
-    else
-        hv.title.text = @"下拉刷新...";
+//    DemoTableHeaderView *hv = (DemoTableHeaderView *)tableV.headerView;
+//    if (willRefreshOnRelease)
+//        hv.title.text = @"释放刷新...";
+//    else
+//        hv.title.text = @"下拉刷新...";
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -176,6 +189,8 @@
     // Call this to indicate that we have finished "refreshing".
     // This will then result in the headerView being unpinned (-unpinHeaderView will be called).
     [tableV refreshCompleted];
+    [_slimeView endRefresh];
+
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -232,14 +247,25 @@
 
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [tableV tableViewWillBeginDragging:scrollView];
+
 }
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [tableV tableViewDidScroll:scrollView];
+    [_slimeView scrollViewDidScroll];
 }
 
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     [tableV tableViewDidEndDragging:scrollView willDecelerate:decelerate];
+
+    [_slimeView scrollViewDidEndDraging];
+
+}
+
+- (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
+{
+    [self performSelector:@selector(addItemsOnTop)
+                     withObject:nil afterDelay:0];
 }
 
 - (void)didReceiveMemoryWarning
