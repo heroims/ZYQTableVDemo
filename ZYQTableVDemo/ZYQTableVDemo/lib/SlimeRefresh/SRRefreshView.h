@@ -42,6 +42,8 @@ typedef void (^SRRefreshBlock)(SRRefreshView* sender);
 // 
 @property (nonatomic, assign)   CGFloat upInset;
 
+@property (nonatomic, assign)   CGFloat sizeHeight;
+
 //
 - (void)scrollViewDidScroll;
 - (void)scrollViewDidEndDraging;

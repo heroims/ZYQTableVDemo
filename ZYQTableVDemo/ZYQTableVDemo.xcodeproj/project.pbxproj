@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94ED17C3D50600CD9DCD /* TableFooterV.m */; };
+		D82A94FD17C3D50600CD9DCD /* TableFooterV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */; };
+		D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F017C3D50600CD9DCD /* TableHeaderV.m */; };
+		D82A94FF17C3D50600CD9DCD /* TableHeaderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */; };
+		D82A950017C3D50600CD9DCD /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F317C3D50600CD9DCD /* sr_refresh.png */; };
+		D82A950117C3D50600CD9DCD /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */; };
+		D82A950217C3D50600CD9DCD /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F717C3D50600CD9DCD /* SRRefreshView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D82A950317C3D50600CD9DCD /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F917C3D50600CD9DCD /* SRSlimeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		D82A950417C3D50600CD9DCD /* ZYQTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */; };
+		D82A950A17C3DF6300CD9DCD /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A950917C3DF6300CD9DCD /* BaseTableView.m */; };
+		D82A950D17C3E18900CD9DCD /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A950C17C3E18900CD9DCD /* MyTableView.m */; };
 		D83C835916E506950065BEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83C835816E506950065BEEB /* UIKit.framework */; };
 		D83C835B16E506950065BEEB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83C835A16E506950065BEEB /* Foundation.framework */; };
 		D83C835D16E506950065BEEB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83C835C16E506950065BEEB /* CoreGraphics.framework */; };
@@ -17,19 +28,29 @@
 		D83C836D16E506950065BEEB /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D83C836C16E506950065BEEB /* Default@2x.png */; };
 		D83C836F16E506950065BEEB /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = D83C836E16E506950065BEEB /* Default-568h@2x.png */; };
 		D83C837716E506AB0065BEEB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C837616E506AB0065BEEB /* ViewController.m */; };
-		D83C837A16E507C00065BEEB /* ZYQTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C837916E507C00065BEEB /* ZYQTableView.m */; };
-		D83C838216E50CA60065BEEB /* DemoTableFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83C838116E50CA60065BEEB /* DemoTableFooterView.xib */; };
-		D83C838416E50D4A0065BEEB /* DemoTableHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D83C838316E50D4A0065BEEB /* DemoTableHeaderView.xib */; };
-		D83C838716E50F850065BEEB /* DemoTableFooterView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C838616E50F850065BEEB /* DemoTableFooterView.m */; };
-		D83C838A16E50FB60065BEEB /* DemoTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */; };
-		D88DC33217C14A0D0007F19E /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D88DC32B17C14A0D0007F19E /* sr_refresh.png */; };
-		D88DC33317C14A0D0007F19E /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */; };
-		D88DC33417C14A0D0007F19E /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DC32F17C14A0D0007F19E /* SRRefreshView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		D88DC33517C14A0D0007F19E /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D88DC33117C14A0D0007F19E /* SRSlimeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
 		D88DC33717C14A3C0007F19E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88DC33617C14A3C0007F19E /* QuartzCore.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D82A94EC17C3D50600CD9DCD /* TableFooterV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFooterV.h; sourceTree = "<group>"; };
+		D82A94ED17C3D50600CD9DCD /* TableFooterV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterV.m; sourceTree = "<group>"; };
+		D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterV.xib; sourceTree = "<group>"; };
+		D82A94EF17C3D50600CD9DCD /* TableHeaderV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableHeaderV.h; sourceTree = "<group>"; };
+		D82A94F017C3D50600CD9DCD /* TableHeaderV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableHeaderV.m; sourceTree = "<group>"; };
+		D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableHeaderV.xib; sourceTree = "<group>"; };
+		D82A94F317C3D50600CD9DCD /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
+		D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
+		D82A94F517C3D50600CD9DCD /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
+		D82A94F617C3D50600CD9DCD /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
+		D82A94F717C3D50600CD9DCD /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
+		D82A94F817C3D50600CD9DCD /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
+		D82A94F917C3D50600CD9DCD /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
+		D82A94FA17C3D50600CD9DCD /* ZYQTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQTableView.h; sourceTree = "<group>"; };
+		D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQTableView.m; sourceTree = "<group>"; };
+		D82A950817C3DF6300CD9DCD /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
+		D82A950917C3DF6300CD9DCD /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
+		D82A950B17C3E18900CD9DCD /* MyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
+		D82A950C17C3E18900CD9DCD /* MyTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView.m; sourceTree = "<group>"; };
 		D83C835516E506950065BEEB /* ZYQTableVDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYQTableVDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D83C835816E506950065BEEB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D83C835A16E506950065BEEB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -45,21 +66,6 @@
 		D83C836E16E506950065BEEB /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		D83C837516E506AB0065BEEB /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		D83C837616E506AB0065BEEB /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		D83C837816E507C00065BEEB /* ZYQTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQTableView.h; sourceTree = "<group>"; };
-		D83C837916E507C00065BEEB /* ZYQTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQTableView.m; sourceTree = "<group>"; };
-		D83C838116E50CA60065BEEB /* DemoTableFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTableFooterView.xib; sourceTree = "<group>"; };
-		D83C838316E50D4A0065BEEB /* DemoTableHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTableHeaderView.xib; sourceTree = "<group>"; };
-		D83C838516E50F850065BEEB /* DemoTableFooterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableFooterView.h; sourceTree = "<group>"; };
-		D83C838616E50F850065BEEB /* DemoTableFooterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableFooterView.m; sourceTree = "<group>"; };
-		D83C838816E50FB60065BEEB /* DemoTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DemoTableHeaderView.h; sourceTree = "<group>"; };
-		D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DemoTableHeaderView.m; sourceTree = "<group>"; };
-		D88DC32B17C14A0D0007F19E /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
-		D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
-		D88DC32D17C14A0D0007F19E /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
-		D88DC32E17C14A0D0007F19E /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
-		D88DC32F17C14A0D0007F19E /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
-		D88DC33017C14A0D0007F19E /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
-		D88DC33117C14A0D0007F19E /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
 		D88DC33617C14A3C0007F19E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -78,10 +84,47 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D82A94EA17C3D50600CD9DCD /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				D82A94EB17C3D50600CD9DCD /* Custom */,
+				D82A94F217C3D50600CD9DCD /* SlimeRefresh */,
+				D82A94FA17C3D50600CD9DCD /* ZYQTableView.h */,
+				D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		D82A94EB17C3D50600CD9DCD /* Custom */ = {
+			isa = PBXGroup;
+			children = (
+				D82A94EC17C3D50600CD9DCD /* TableFooterV.h */,
+				D82A94ED17C3D50600CD9DCD /* TableFooterV.m */,
+				D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */,
+				D82A94EF17C3D50600CD9DCD /* TableHeaderV.h */,
+				D82A94F017C3D50600CD9DCD /* TableHeaderV.m */,
+				D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */,
+			);
+			path = Custom;
+			sourceTree = "<group>";
+		};
+		D82A94F217C3D50600CD9DCD /* SlimeRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				D82A94F317C3D50600CD9DCD /* sr_refresh.png */,
+				D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */,
+				D82A94F517C3D50600CD9DCD /* SRDefine.h */,
+				D82A94F617C3D50600CD9DCD /* SRRefreshView.h */,
+				D82A94F717C3D50600CD9DCD /* SRRefreshView.m */,
+				D82A94F817C3D50600CD9DCD /* SRSlimeView.h */,
+				D82A94F917C3D50600CD9DCD /* SRSlimeView.m */,
+			);
+			path = SlimeRefresh;
+			sourceTree = "<group>";
+		};
 		D83C834C16E506950065BEEB = {
 			isa = PBXGroup;
 			children = (
-				D88DC33617C14A3C0007F19E /* QuartzCore.framework */,
 				D83C835E16E506950065BEEB /* ZYQTableVDemo */,
 				D83C835716E506950065BEEB /* Frameworks */,
 				D83C835616E506950065BEEB /* Products */,
@@ -99,6 +142,7 @@
 		D83C835716E506950065BEEB /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D88DC33617C14A3C0007F19E /* QuartzCore.framework */,
 				D83C835816E506950065BEEB /* UIKit.framework */,
 				D83C835A16E506950065BEEB /* Foundation.framework */,
 				D83C835C16E506950065BEEB /* CoreGraphics.framework */,
@@ -111,11 +155,13 @@
 			children = (
 				D83C836716E506950065BEEB /* AppDelegate.h */,
 				D83C836816E506950065BEEB /* AppDelegate.m */,
-				D88DC32A17C14A0D0007F19E /* SlimeRefresh */,
 				D83C837516E506AB0065BEEB /* ViewController.h */,
 				D83C837616E506AB0065BEEB /* ViewController.m */,
-				D83C837816E507C00065BEEB /* ZYQTableView.h */,
-				D83C837916E507C00065BEEB /* ZYQTableView.m */,
+				D82A950B17C3E18900CD9DCD /* MyTableView.h */,
+				D82A950C17C3E18900CD9DCD /* MyTableView.m */,
+				D82A950817C3DF6300CD9DCD /* BaseTableView.h */,
+				D82A950917C3DF6300CD9DCD /* BaseTableView.m */,
+				D82A94EA17C3D50600CD9DCD /* lib */,
 				D83C835F16E506950065BEEB /* Supporting Files */,
 			);
 			path = ZYQTableVDemo;
@@ -124,8 +170,6 @@
 		D83C835F16E506950065BEEB /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				D83C838116E50CA60065BEEB /* DemoTableFooterView.xib */,
-				D83C838316E50D4A0065BEEB /* DemoTableHeaderView.xib */,
 				D83C836016E506950065BEEB /* ZYQTableVDemo-Info.plist */,
 				D83C836116E506950065BEEB /* InfoPlist.strings */,
 				D83C836416E506950065BEEB /* main.m */,
@@ -133,26 +177,8 @@
 				D83C836A16E506950065BEEB /* Default.png */,
 				D83C836C16E506950065BEEB /* Default@2x.png */,
 				D83C836E16E506950065BEEB /* Default-568h@2x.png */,
-				D83C838516E50F850065BEEB /* DemoTableFooterView.h */,
-				D83C838616E50F850065BEEB /* DemoTableFooterView.m */,
-				D83C838816E50FB60065BEEB /* DemoTableHeaderView.h */,
-				D83C838916E50FB60065BEEB /* DemoTableHeaderView.m */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		D88DC32A17C14A0D0007F19E /* SlimeRefresh */ = {
-			isa = PBXGroup;
-			children = (
-				D88DC32B17C14A0D0007F19E /* sr_refresh.png */,
-				D88DC32C17C14A0D0007F19E /* sr_refresh@2X.png */,
-				D88DC32D17C14A0D0007F19E /* SRDefine.h */,
-				D88DC32E17C14A0D0007F19E /* SRRefreshView.h */,
-				D88DC32F17C14A0D0007F19E /* SRRefreshView.m */,
-				D88DC33017C14A0D0007F19E /* SRSlimeView.h */,
-				D88DC33117C14A0D0007F19E /* SRSlimeView.m */,
-			);
-			path = SlimeRefresh;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,10 +236,10 @@
 				D83C836B16E506950065BEEB /* Default.png in Resources */,
 				D83C836D16E506950065BEEB /* Default@2x.png in Resources */,
 				D83C836F16E506950065BEEB /* Default-568h@2x.png in Resources */,
-				D83C838216E50CA60065BEEB /* DemoTableFooterView.xib in Resources */,
-				D83C838416E50D4A0065BEEB /* DemoTableHeaderView.xib in Resources */,
-				D88DC33217C14A0D0007F19E /* sr_refresh.png in Resources */,
-				D88DC33317C14A0D0007F19E /* sr_refresh@2X.png in Resources */,
+				D82A94FD17C3D50600CD9DCD /* TableFooterV.xib in Resources */,
+				D82A94FF17C3D50600CD9DCD /* TableHeaderV.xib in Resources */,
+				D82A950017C3D50600CD9DCD /* sr_refresh.png in Resources */,
+				D82A950117C3D50600CD9DCD /* sr_refresh@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,11 +253,13 @@
 				D83C836516E506950065BEEB /* main.m in Sources */,
 				D83C836916E506950065BEEB /* AppDelegate.m in Sources */,
 				D83C837716E506AB0065BEEB /* ViewController.m in Sources */,
-				D83C837A16E507C00065BEEB /* ZYQTableView.m in Sources */,
-				D83C838716E50F850065BEEB /* DemoTableFooterView.m in Sources */,
-				D83C838A16E50FB60065BEEB /* DemoTableHeaderView.m in Sources */,
-				D88DC33417C14A0D0007F19E /* SRRefreshView.m in Sources */,
-				D88DC33517C14A0D0007F19E /* SRSlimeView.m in Sources */,
+				D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */,
+				D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */,
+				D82A950217C3D50600CD9DCD /* SRRefreshView.m in Sources */,
+				D82A950317C3D50600CD9DCD /* SRSlimeView.m in Sources */,
+				D82A950417C3D50600CD9DCD /* ZYQTableView.m in Sources */,
+				D82A950A17C3DF6300CD9DCD /* BaseTableView.m in Sources */,
+				D82A950D17C3E18900CD9DCD /* MyTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

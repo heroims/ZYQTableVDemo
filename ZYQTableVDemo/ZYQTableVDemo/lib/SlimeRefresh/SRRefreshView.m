@@ -24,6 +24,7 @@
     BOOL        _unmissSlime;
     CGFloat     _dragingHeight;
     UILabel *_lblTime;
+    CGFloat     _sizeHeight;
 }
 
 @synthesize delegate = _delegate, broken = _broken;
@@ -33,6 +34,7 @@
 @synthesize slimeMissWhenGoingBack = _slimeMissWhenGoingBack;
 @synthesize activityIndicationView = _activityIndicatorView;
 @synthesize lblTime=_lblTime;
+@synthesize sizeHeight=_sizeHeight;
 
 - (void)dealloc
 {
@@ -40,7 +42,8 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    self = [self initWithHeight:60];
+    _sizeHeight=[[UIScreen mainScreen] bounds].size.height==480?44 : 60;
+    self = [self initWithHeight:_sizeHeight];
     return self;
 }
 
@@ -71,8 +74,8 @@
                             action:@selector(pullApart:)];
         _dragingHeight = 32;
         
-        _lblTime=[[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height-20, 320, 12)];
-        _lblTime.font=[UIFont systemFontOfSize:12];
+        _lblTime=[[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height-(_sizeHeight-_dragingHeight), 320, _sizeHeight-_dragingHeight)];
+        _lblTime.font=[UIFont systemFontOfSize:[[UIScreen mainScreen] bounds].size.height==480?10: 12];
         _lblTime.backgroundColor=[UIColor clearColor];
         _lblTime.textAlignment=NSTextAlignmentCenter;
         [self addSubview:_lblTime];
@@ -109,7 +112,7 @@
         _slime.alpha = 1;
     }else {
         CGPoint p = _scrollView.contentOffset;
-        self.alpha = -(p.y + _upInset) / 60;
+        self.alpha = -(p.y + _upInset) / _sizeHeight;
     }
 }
 
@@ -149,7 +152,7 @@
         [self updateRefreshDate];
         if (!_scrollView.isDragging) {
             UIEdgeInsets inset = _scrollView.contentInset;
-            inset.top = _upInset + 60;
+            inset.top = _upInset + _sizeHeight;
             _scrollView.contentInset = inset;
         }
         if (!_unmissSlime){
@@ -196,7 +199,7 @@
     if ([self.superview isKindOfClass:[UIScrollView class]]) {
         self.scrollView = (id)[self superview];
         CGRect rect = self.frame;
-        rect.origin.y = rect.size.height?-rect.size.height:-60;
+        rect.origin.y = rect.size.height?-rect.size.height:-_sizeHeight;
         rect.size.width = _scrollView.frame.size.width;
         self.frame = rect;
         self.slime.toPoint = self.slime.startPoint;
@@ -231,7 +234,7 @@
 {
     CGPoint p = _scrollView.contentOffset;
     CGRect rect = self.frame;
-    if (p.y <= - 60 - _upInset) {
+    if (p.y <= - _sizeHeight - _upInset) {
         rect.origin.y = p.y + _upInset;
         rect.size.height = -p.y;
         rect.size.height = ceilf(rect.size.height);
@@ -240,7 +243,7 @@
             [_slime setNeedsDisplay];
         }
         if (!_broken) {
-            float l = -(p.y + 60 + _upInset);
+            float l = -(p.y + _sizeHeight + _upInset);
             if (l <= _oldLength) {
                 l = MIN(distansBetween(_slime.startPoint, _slime.toPoint), l);
                 CGPoint ssp = _slime.startPoint;
@@ -257,14 +260,15 @@
         }
         if (self.alpha != 1.0f) self.alpha = 1.0f;
     }else if (p.y < -_upInset) {
-        rect.origin.y = -60;
-        rect.size.height = 60;
+        rect.origin.y = -_sizeHeight;
+        rect.size.height = _sizeHeight;
         self.frame = rect;
         [_slime setNeedsDisplay];
         _slime.toPoint = _slime.startPoint;
-        if (_slimeMissWhenGoingBack) self.alpha = -(p.y + _upInset) / 60;
+        if (_slimeMissWhenGoingBack) self.alpha = -(p.y + _upInset) / _sizeHeight;
     }
-    _lblTime.frame = CGRectMake(0, self.frame.size.height-20, 320, 12);
+
+    _lblTime.frame = CGRectMake(0, self.frame.size.height>_sizeHeight?self.frame.size.height-(_sizeHeight-_dragingHeight)-_upInset:self.frame.size.height-(_sizeHeight-_dragingHeight), 320, _sizeHeight-_dragingHeight);
 }
 
 - (void)scrollViewDidEndDraging
@@ -276,7 +280,7 @@
                                options:UIViewAnimationOptionAllowUserInteraction
                             animations:^{
                                 UIEdgeInsets inset = _scrollView.contentInset;
-                                inset.top = _upInset + 60;
+                                inset.top = _upInset + _sizeHeight;
                                 _scrollView.contentInset = inset;
                             } completion:^(BOOL finished) {
                                 self.broken = NO;
