@@ -49,7 +49,23 @@
     [self.view addSubview:tableV];
     [tableV release];
 
-	// Do any additional setup after loading the view.
+    UIButton *btnPlayPlane=[UIButton buttonWithType:UIButtonTypeRoundedRect];
+    btnPlayPlane.frame=CGRectMake(0, self.view.frame.size.height-60, 320, 60);
+    [btnPlayPlane setTitle:@"玩打飞机" forState:UIControlStateNormal];
+    [btnPlayPlane addTarget:self action:@selector(btnPlayPlaneClick) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btnPlayPlane];
+}
+
+-(void)btnPlayPlaneClick{
+    [[UIApplication sharedApplication] setStatusBarHidden:YES];
+
+    UIWindow *newwindow = [[[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]] autorelease];
+    // Override point for customization after application launch.
+    newwindow.backgroundColor = [UIColor whiteColor];
+    newwindow.rootViewController=((AppDelegate*) [UIApplication sharedApplication].delegate).navController;
+    
+    ((AppDelegate*) [UIApplication sharedApplication].delegate).window=newwindow;
+    [newwindow makeKeyAndVisible];
 }
 
 

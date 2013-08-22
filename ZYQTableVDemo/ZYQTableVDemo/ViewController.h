@@ -9,5 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "MyTableView.h"
 
+#import "AppDelegate.h"
+
 @interface ViewController : UIViewController
+
+@property (readonly) MyNavigationController *navController;
+@property (readonly) CCDirectorIOS *director;
+
 @end

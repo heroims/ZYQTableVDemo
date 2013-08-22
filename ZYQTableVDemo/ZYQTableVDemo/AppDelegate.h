@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+@interface MyNavigationController : UINavigationController <CCDirectorDelegate>
+@end
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (readonly) MyNavigationController *navController;
+@property (readonly) CCDirectorIOS *director;
 
 @end
