@@ -154,7 +154,9 @@ NS_INLINE CGPoint pointLineToArc(CGPoint center, CGPoint p2, float angle, CGFloa
                                             percent:percent];
                 [self setContext:context path:path];
                 CGContextDrawPath(context, kCGPathFillStroke);
-                if (percent <= 0) {
+                
+                //下拉长度控制
+                if (percent <= (([UIScreen mainScreen].bounds.size.height == 480)?0.4:0.1)) {
                     _state = SRSlimeStateShortening;
                     
                     // pragma mark to suppress the warning

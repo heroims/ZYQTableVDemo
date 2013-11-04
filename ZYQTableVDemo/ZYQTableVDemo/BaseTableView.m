@@ -101,6 +101,15 @@
     
 }
 
+#pragma mark - UITableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
+
 #pragma mark - Load More
 
 - (void) willBeginLoadingMore

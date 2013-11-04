@@ -42,7 +42,7 @@
 
 - (id)initWithFrame:(CGRect)frame
 {
-    _sizeHeight=[[UIScreen mainScreen] bounds].size.height==480?44 : 60;
+    _sizeHeight=[UIScreen mainScreen].bounds.size.height==480?44 : 50;
     self = [self initWithHeight:_sizeHeight];
     return self;
 }
@@ -74,8 +74,8 @@
                             action:@selector(pullApart:)];
         _dragingHeight = 32;
         
-        _lblTime=[[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height-(_sizeHeight-_dragingHeight), 320, _sizeHeight-_dragingHeight)];
-        _lblTime.font=[UIFont systemFontOfSize:[[UIScreen mainScreen] bounds].size.height==480?10: 12];
+        _lblTime=[[UILabel alloc] initWithFrame:CGRectMake(0, self.frame.size.height-(_sizeHeight-_dragingHeight)+([UIScreen mainScreen].bounds.size.height==480?2:1), 320, _sizeHeight-_dragingHeight)];
+        _lblTime.font=[UIFont systemFontOfSize:[UIScreen mainScreen].bounds.size.height==480?10: 12];
         _lblTime.backgroundColor=[UIColor clearColor];
         _lblTime.textAlignment=NSTextAlignmentCenter;
         [self addSubview:_lblTime];
@@ -268,7 +268,7 @@
         if (_slimeMissWhenGoingBack) self.alpha = -(p.y + _upInset) / _sizeHeight;
     }
 
-    _lblTime.frame = CGRectMake(0, self.frame.size.height>_sizeHeight?self.frame.size.height-(_sizeHeight-_dragingHeight)-_upInset:self.frame.size.height-(_sizeHeight-_dragingHeight), 320, _sizeHeight-_dragingHeight);
+    _lblTime.frame = CGRectMake(0, (self.frame.size.height>_sizeHeight?self.frame.size.height-(_sizeHeight-_dragingHeight)-_upInset:self.frame.size.height-(_sizeHeight-_dragingHeight))+([UIScreen mainScreen].bounds.size.height==480?2:1), 320, _sizeHeight-_dragingHeight);
 }
 
 - (void)scrollViewDidEndDraging
