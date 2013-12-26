@@ -16,4 +16,6 @@
 
 @property(nonatomic,retain)SRRefreshView *slimeView;
 
+@property(nonatomic,assign)BOOL isEmpty;
+
 @end

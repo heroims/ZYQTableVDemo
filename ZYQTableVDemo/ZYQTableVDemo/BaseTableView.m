@@ -73,15 +73,23 @@
     return self;
 }
 
-#pragma mark Data Source
+#pragma mark - SRRefreshView Delegate
+- (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
+{
+    [self performSelector:@selector(refreshData)
+               withObject:nil];
+}
+
+#pragma mark - BaseTableView DataSource
 -(void)loadMoreData{
 }
 
 -(void)refreshData{
     
 }
+#pragma mark - ZYQTableViewDelegate
 
-#pragma mark - Pull to Refresh
+#pragma mark  Pull to Refresh
 
 - (void) pinHeaderView
 {
@@ -101,24 +109,16 @@
     
 }
 
-#pragma mark - UITableView DataSource
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
-}
-
--(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return nil;
-}
-
-#pragma mark - Load More
+#pragma mark  Load More
 
 - (void) willBeginLoadingMore
 {
     TableFooterV *fv = (TableFooterV *)self.footerView;
     [fv.aiv startAnimating];
     
+    fv.aiv.hidden=NO;
     fv.lblText.text = @"正在加载...";
-
+    
 }
 
 - (void) loadMoreCompleted
@@ -128,8 +128,21 @@
     [fv.aiv stopAnimating];
     
     fv.aiv.hidden=YES;
-    
-    fv.lblText.text = @"没有更多了";
+    fv.aiv.hidden=YES;
+    if (self.canLoadMore) {
+        if (self.isEmpty) {
+            fv.lblText.text = @"";
+        }else{
+            fv.lblText.text = @"上拉加载更多";
+        }
+    }
+    else{
+        if (self.isEmpty) {
+            fv.lblText.text = @"";
+        }else{
+            fv.lblText.text = @"没有更多了";
+        }
+    }
 }
 
 
@@ -145,6 +158,16 @@
     
 }
 
+#pragma mark - UITableView DataSource
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    return 0;
+}
+
+-(UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    return nil;
+}
+
+
 #pragma mark - UIScrollView Delegate
 -(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
     [self tableViewWillBeginDragging:scrollView];
@@ -153,6 +176,13 @@
 
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     [self tableViewDidScroll:scrollView];
+    if (scrollView.contentOffset.y<0) {
+        NSLog(@"header: %f",-scrollView.contentOffset.y/44);
+    }
+    
+    if ((self.contentSize.height-(scrollView.contentOffset.y+scrollView.frame.size.height)-self.footerView.frame.size.height)<0) {
+        NSLog(@"footer: %f",-(self.contentSize.height-(scrollView.contentOffset.y+scrollView.frame.size.height)-self.footerView.frame.size.height)/self.footerView.frame.size.height);
+    }
     [_slimeView scrollViewDidScroll];
 }
 
@@ -163,12 +193,6 @@
     
 }
 
-#pragma mark -SRRefreshView Delegate
-- (void)slimeRefreshStartRefresh:(SRRefreshView *)refreshView
-{
-    [self performSelector:@selector(refreshData)
-               withObject:nil];
-}
 
 /*
 // Only override drawRect: if you perform custom drawing.

@@ -233,7 +233,7 @@
                        scrollView:scrollView];
     } else if (!isLoadingMore && canLoadMore) {
         CGFloat scrollPosition = scrollView.contentSize.height - scrollView.frame.size.height - scrollView.contentOffset.y;
-        if (scrollPosition < [self footerLoadMoreHeight]) {
+        if (scrollPosition < -[self footerLoadMoreHeight]) {
             [self loadMore];
         }
     }
@@ -245,6 +245,7 @@
         return;
     
     isDragging = NO;
+
     if (scrollView.contentOffset.y <= 0 - [self headerRefreshHeight]) {
         if (canPullToRefresh)
             [self refresh];

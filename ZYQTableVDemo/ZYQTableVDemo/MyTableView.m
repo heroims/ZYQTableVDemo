@@ -35,7 +35,11 @@
 #pragma mark - BaseTableView DataSource
 
 -(void)loadMoreData{
-    [self addItemsOnBottom];
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0),^{
+        sleep(1);
+
+        [self addItemsOnBottom];
+    });
 }
 
 -(void)refreshData{
@@ -61,13 +65,14 @@
     for (int i = 0; i < 5; i++)
         [items addObject:[self createRandomValue]];
     
-    [self reloadData];
+    [self performSelectorOnMainThread:@selector(reloadData) withObject:nil waitUntilDone:NO];
     
-    if (items.count > 50)
+    if (items.count > 50){
         self.canLoadMore = NO; // signal that there won't be any more items to load
-    else
+    }
+    else{
         self.canLoadMore = YES;
-    
+    }
     // Inform STableViewController that we have finished loading more items
     [self performSelectorOnMainThread:@selector(loadMoreCompleting) withObject:nil waitUntilDone:NO];
     

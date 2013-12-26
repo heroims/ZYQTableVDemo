@@ -40,7 +40,6 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor redColor];
-
     
     // add sample items
 
