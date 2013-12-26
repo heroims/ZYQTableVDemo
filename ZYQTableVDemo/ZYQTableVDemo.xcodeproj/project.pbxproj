@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18CCF07A186C2083003A1A70 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF079186C2083003A1A70 /* ViewController1.m */; };
+		18CCF07D186C2109003A1A70 /* MyTableView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF07C186C2109003A1A70 /* MyTableView1.m */; };
+		18CCF080186C222F003A1A70 /* BaseTableView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF07F186C222F003A1A70 /* BaseTableView1.m */; };
 		D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94ED17C3D50600CD9DCD /* TableFooterV.m */; };
 		D82A94FD17C3D50600CD9DCD /* TableFooterV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */; };
 		D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F017C3D50600CD9DCD /* TableHeaderV.m */; };
@@ -32,6 +35,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18CCF078186C2083003A1A70 /* ViewController1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController1.h; sourceTree = "<group>"; };
+		18CCF079186C2083003A1A70 /* ViewController1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController1.m; sourceTree = "<group>"; };
+		18CCF07B186C2109003A1A70 /* MyTableView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView1.h; sourceTree = "<group>"; };
+		18CCF07C186C2109003A1A70 /* MyTableView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView1.m; sourceTree = "<group>"; };
+		18CCF07E186C222F003A1A70 /* BaseTableView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView1.h; sourceTree = "<group>"; };
+		18CCF07F186C222F003A1A70 /* BaseTableView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView1.m; sourceTree = "<group>"; };
 		D82A94EC17C3D50600CD9DCD /* TableFooterV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFooterV.h; sourceTree = "<group>"; };
 		D82A94ED17C3D50600CD9DCD /* TableFooterV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterV.m; sourceTree = "<group>"; };
 		D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterV.xib; sourceTree = "<group>"; };
@@ -157,10 +166,16 @@
 				D83C836816E506950065BEEB /* AppDelegate.m */,
 				D83C837516E506AB0065BEEB /* ViewController.h */,
 				D83C837616E506AB0065BEEB /* ViewController.m */,
+				18CCF078186C2083003A1A70 /* ViewController1.h */,
+				18CCF079186C2083003A1A70 /* ViewController1.m */,
+				18CCF07B186C2109003A1A70 /* MyTableView1.h */,
+				18CCF07C186C2109003A1A70 /* MyTableView1.m */,
 				D82A950B17C3E18900CD9DCD /* MyTableView.h */,
 				D82A950C17C3E18900CD9DCD /* MyTableView.m */,
 				D82A950817C3DF6300CD9DCD /* BaseTableView.h */,
 				D82A950917C3DF6300CD9DCD /* BaseTableView.m */,
+				18CCF07E186C222F003A1A70 /* BaseTableView1.h */,
+				18CCF07F186C222F003A1A70 /* BaseTableView1.m */,
 				D82A94EA17C3D50600CD9DCD /* lib */,
 				D83C835F16E506950065BEEB /* Supporting Files */,
 			);
@@ -253,10 +268,13 @@
 				D83C836516E506950065BEEB /* main.m in Sources */,
 				D83C836916E506950065BEEB /* AppDelegate.m in Sources */,
 				D83C837716E506AB0065BEEB /* ViewController.m in Sources */,
+				18CCF07D186C2109003A1A70 /* MyTableView1.m in Sources */,
 				D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */,
+				18CCF080186C222F003A1A70 /* BaseTableView1.m in Sources */,
 				D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */,
 				D82A950217C3D50600CD9DCD /* SRRefreshView.m in Sources */,
 				D82A950317C3D50600CD9DCD /* SRSlimeView.m in Sources */,
+				18CCF07A186C2083003A1A70 /* ViewController1.m in Sources */,
 				D82A950417C3D50600CD9DCD /* ZYQTableView.m in Sources */,
 				D82A950A17C3DF6300CD9DCD /* BaseTableView.m in Sources */,
 				D82A950D17C3E18900CD9DCD /* MyTableView.m in Sources */,

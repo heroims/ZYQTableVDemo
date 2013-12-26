@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "ViewController1.h"
 #import "TableHeaderV.h"
 #import "TableFooterV.h"
 
@@ -40,7 +41,7 @@
     [super viewDidLoad];
     
     self.view.backgroundColor=[UIColor redColor];
-    
+    self.navigationController.navigationBar.translucent=NO;
     // add sample items
 
     
@@ -48,9 +49,19 @@
     [self.view addSubview:tableV];
     [tableV release];
 
+    UIButton *btnPush=[UIButton buttonWithType:UIButtonTypeCustom];
+    btnPush.frame=CGRectMake(60, 330, 200, 50);
+    btnPush.layer.borderWidth=1;
+    btnPush.layer.borderColor=[[UIColor colorWithRed:0.6 green:0.6 blue:0.8 alpha:1] CGColor];
+    [self.view addSubview:btnPush];
+    [btnPush addTarget:self action:@selector(btnPushClick:) forControlEvents:UIControlEventTouchUpInside];
 	// Do any additional setup after loading the view.
 }
 
-
+-(void)btnPushClick:(UIButton*)sender{
+    ViewController1 *vc1=[[ViewController1 alloc] init];
+    [self.navigationController pushViewController:vc1 animated:YES];
+    [vc1 release];
+}
 
 @end

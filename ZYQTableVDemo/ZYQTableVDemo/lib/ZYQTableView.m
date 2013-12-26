@@ -227,7 +227,7 @@
 }
 
 - (void) tableViewDidScroll:(UIScrollView *)scrollView
-{
+{NSLog(@"%f----%f",scrollView.contentOffset.y,- [self headerRefreshHeight]);
     if (!isRefreshing && isDragging && scrollView.contentOffset.y < 0) {
         [_pdelegate headerViewDidScroll:scrollView.contentOffset.y < 0 - [self headerRefreshHeight]
                        scrollView:scrollView];
