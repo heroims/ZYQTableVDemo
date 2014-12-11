@@ -40,6 +40,8 @@
     BOOL isLoadingMore;
     
     CGRect headerViewFrame;
+    
+    __unsafe_unretained id<ZYQTableViewDelegate> _pdelegate;
 }
 // The view used for "pull to refresh"
 @property (nonatomic, retain) UIView *headerView;

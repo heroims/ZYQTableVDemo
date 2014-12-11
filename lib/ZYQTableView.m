@@ -36,7 +36,6 @@
 -(id)initWithFrame:(CGRect)frame{
     if ((self = [super initWithFrame:frame])){
         [self initialize];
-        self.frame = self.bounds;
         self.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
     }
@@ -44,10 +43,19 @@
 
 }
 
+-(id)initWithFrame:(CGRect)frame style:(UITableViewStyle)style{
+    if ((self = [super initWithFrame:frame style:style])){
+        [self initialize];
+        self.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+        
+    }
+    return self;
+    
+}
+
 -(id)initWithFrame:(CGRect)frame delegate:(id)delegate{
     if ((self = [super initWithFrame:frame])){
         [self initialize];
-        self.frame = self.bounds;
         _pdelegate=delegate;
         self.autoresizingMask =  UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         
@@ -227,13 +235,13 @@
 }
 
 - (void) tableViewDidScroll:(UIScrollView *)scrollView
-{NSLog(@"%f----%f",scrollView.contentOffset.y,- [self headerRefreshHeight]);
+{
     if (!isRefreshing && isDragging && scrollView.contentOffset.y < 0) {
         [_pdelegate headerViewDidScroll:scrollView.contentOffset.y < 0 - [self headerRefreshHeight]
                        scrollView:scrollView];
     } else if (!isLoadingMore && canLoadMore) {
         CGFloat scrollPosition = scrollView.contentSize.height - scrollView.frame.size.height - scrollView.contentOffset.y;
-        if (scrollPosition < -[self footerLoadMoreHeight]) {
+        if (scrollPosition < [self footerLoadMoreHeight]) {
             [self loadMore];
         }
     }
@@ -245,7 +253,6 @@
         return;
     
     isDragging = NO;
-
     if (scrollView.contentOffset.y <= 0 - [self headerRefreshHeight]) {
         if (canPullToRefresh)
             [self refresh];

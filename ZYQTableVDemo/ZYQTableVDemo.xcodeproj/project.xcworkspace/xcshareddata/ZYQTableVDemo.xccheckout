@@ -10,29 +10,29 @@
 	<string>ZYQTableVDemo</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>BEC655BA-0813-4094-8DED-D43AB2EE6FBD</key>
+		<key>A526454B6CEBCEAE128A65038C9B10C3EB1F56CA</key>
 		<string>https://github.com/heroims/ZYQTableVDemo.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>ZYQTableVDemo/ZYQTableVDemo.xcodeproj/project.xcworkspace</string>
+	<string>ZYQTableVDemo/ZYQTableVDemo.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>BEC655BA-0813-4094-8DED-D43AB2EE6FBD</key>
+		<key>A526454B6CEBCEAE128A65038C9B10C3EB1F56CA</key>
 		<string>../../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/heroims/ZYQTableVDemo.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>BEC655BA-0813-4094-8DED-D43AB2EE6FBD</string>
+	<string>A526454B6CEBCEAE128A65038C9B10C3EB1F56CA</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>BEC655BA-0813-4094-8DED-D43AB2EE6FBD</string>
+			<string>A526454B6CEBCEAE128A65038C9B10C3EB1F56CA</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ZYQTableVDemo</string>
 		</dict>

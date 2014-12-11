@@ -10,15 +10,15 @@
 		18CCF07A186C2083003A1A70 /* ViewController1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF079186C2083003A1A70 /* ViewController1.m */; };
 		18CCF07D186C2109003A1A70 /* MyTableView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF07C186C2109003A1A70 /* MyTableView1.m */; };
 		18CCF080186C222F003A1A70 /* BaseTableView1.m in Sources */ = {isa = PBXBuildFile; fileRef = 18CCF07F186C222F003A1A70 /* BaseTableView1.m */; };
-		D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94ED17C3D50600CD9DCD /* TableFooterV.m */; };
-		D82A94FD17C3D50600CD9DCD /* TableFooterV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */; };
-		D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F017C3D50600CD9DCD /* TableHeaderV.m */; };
-		D82A94FF17C3D50600CD9DCD /* TableHeaderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */; };
-		D82A950017C3D50600CD9DCD /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F317C3D50600CD9DCD /* sr_refresh.png */; };
-		D82A950117C3D50600CD9DCD /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */; };
-		D82A950217C3D50600CD9DCD /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F717C3D50600CD9DCD /* SRRefreshView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		D82A950317C3D50600CD9DCD /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94F917C3D50600CD9DCD /* SRSlimeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
-		D82A950417C3D50600CD9DCD /* ZYQTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */; };
+		5AFC446C1A3943CD00728850 /* TableFooterV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC445D1A3943CD00728850 /* TableFooterV.m */; };
+		5AFC446D1A3943CD00728850 /* TableFooterV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC445E1A3943CD00728850 /* TableFooterV.xib */; };
+		5AFC446E1A3943CD00728850 /* TableHeaderV.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC44601A3943CD00728850 /* TableHeaderV.m */; };
+		5AFC446F1A3943CD00728850 /* TableHeaderV.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC44611A3943CD00728850 /* TableHeaderV.xib */; };
+		5AFC44701A3943CD00728850 /* sr_refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC44631A3943CD00728850 /* sr_refresh.png */; };
+		5AFC44711A3943CD00728850 /* sr_refresh@2X.png in Resources */ = {isa = PBXBuildFile; fileRef = 5AFC44641A3943CD00728850 /* sr_refresh@2X.png */; };
+		5AFC44721A3943CD00728850 /* SRRefreshView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC44671A3943CD00728850 /* SRRefreshView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		5AFC44731A3943CD00728850 /* SRSlimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC44691A3943CD00728850 /* SRSlimeView.m */; settings = {COMPILER_FLAGS = "-fobjc-arc"; }; };
+		5AFC44741A3943CD00728850 /* ZYQTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5AFC446B1A3943CD00728850 /* ZYQTableView.m */; };
 		D82A950A17C3DF6300CD9DCD /* BaseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A950917C3DF6300CD9DCD /* BaseTableView.m */; };
 		D82A950D17C3E18900CD9DCD /* MyTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D82A950C17C3E18900CD9DCD /* MyTableView.m */; };
 		D83C835916E506950065BEEB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D83C835816E506950065BEEB /* UIKit.framework */; };
@@ -41,21 +41,21 @@
 		18CCF07C186C2109003A1A70 /* MyTableView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableView1.m; sourceTree = "<group>"; };
 		18CCF07E186C222F003A1A70 /* BaseTableView1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView1.h; sourceTree = "<group>"; };
 		18CCF07F186C222F003A1A70 /* BaseTableView1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView1.m; sourceTree = "<group>"; };
-		D82A94EC17C3D50600CD9DCD /* TableFooterV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFooterV.h; sourceTree = "<group>"; };
-		D82A94ED17C3D50600CD9DCD /* TableFooterV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterV.m; sourceTree = "<group>"; };
-		D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterV.xib; sourceTree = "<group>"; };
-		D82A94EF17C3D50600CD9DCD /* TableHeaderV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableHeaderV.h; sourceTree = "<group>"; };
-		D82A94F017C3D50600CD9DCD /* TableHeaderV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableHeaderV.m; sourceTree = "<group>"; };
-		D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableHeaderV.xib; sourceTree = "<group>"; };
-		D82A94F317C3D50600CD9DCD /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
-		D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
-		D82A94F517C3D50600CD9DCD /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
-		D82A94F617C3D50600CD9DCD /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
-		D82A94F717C3D50600CD9DCD /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
-		D82A94F817C3D50600CD9DCD /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
-		D82A94F917C3D50600CD9DCD /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
-		D82A94FA17C3D50600CD9DCD /* ZYQTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQTableView.h; sourceTree = "<group>"; };
-		D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQTableView.m; sourceTree = "<group>"; };
+		5AFC445C1A3943CD00728850 /* TableFooterV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableFooterV.h; sourceTree = "<group>"; };
+		5AFC445D1A3943CD00728850 /* TableFooterV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableFooterV.m; sourceTree = "<group>"; };
+		5AFC445E1A3943CD00728850 /* TableFooterV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableFooterV.xib; sourceTree = "<group>"; };
+		5AFC445F1A3943CD00728850 /* TableHeaderV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableHeaderV.h; sourceTree = "<group>"; };
+		5AFC44601A3943CD00728850 /* TableHeaderV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TableHeaderV.m; sourceTree = "<group>"; };
+		5AFC44611A3943CD00728850 /* TableHeaderV.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableHeaderV.xib; sourceTree = "<group>"; };
+		5AFC44631A3943CD00728850 /* sr_refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sr_refresh.png; sourceTree = "<group>"; };
+		5AFC44641A3943CD00728850 /* sr_refresh@2X.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sr_refresh@2X.png"; sourceTree = "<group>"; };
+		5AFC44651A3943CD00728850 /* SRDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRDefine.h; sourceTree = "<group>"; };
+		5AFC44661A3943CD00728850 /* SRRefreshView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRRefreshView.h; sourceTree = "<group>"; };
+		5AFC44671A3943CD00728850 /* SRRefreshView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRRefreshView.m; sourceTree = "<group>"; };
+		5AFC44681A3943CD00728850 /* SRSlimeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRSlimeView.h; sourceTree = "<group>"; };
+		5AFC44691A3943CD00728850 /* SRSlimeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRSlimeView.m; sourceTree = "<group>"; };
+		5AFC446A1A3943CD00728850 /* ZYQTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZYQTableView.h; sourceTree = "<group>"; };
+		5AFC446B1A3943CD00728850 /* ZYQTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZYQTableView.m; sourceTree = "<group>"; };
 		D82A950817C3DF6300CD9DCD /* BaseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableView.h; sourceTree = "<group>"; };
 		D82A950917C3DF6300CD9DCD /* BaseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableView.m; sourceTree = "<group>"; };
 		D82A950B17C3E18900CD9DCD /* MyTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableView.h; sourceTree = "<group>"; };
@@ -93,40 +93,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D82A94EA17C3D50600CD9DCD /* lib */ = {
+		5AFC445A1A3943CD00728850 /* lib */ = {
 			isa = PBXGroup;
 			children = (
-				D82A94EB17C3D50600CD9DCD /* Custom */,
-				D82A94F217C3D50600CD9DCD /* SlimeRefresh */,
-				D82A94FA17C3D50600CD9DCD /* ZYQTableView.h */,
-				D82A94FB17C3D50600CD9DCD /* ZYQTableView.m */,
+				5AFC445B1A3943CD00728850 /* Custom */,
+				5AFC44621A3943CD00728850 /* SlimeRefresh */,
+				5AFC446A1A3943CD00728850 /* ZYQTableView.h */,
+				5AFC446B1A3943CD00728850 /* ZYQTableView.m */,
 			);
-			path = lib;
+			name = lib;
+			path = ../../lib;
 			sourceTree = "<group>";
 		};
-		D82A94EB17C3D50600CD9DCD /* Custom */ = {
+		5AFC445B1A3943CD00728850 /* Custom */ = {
 			isa = PBXGroup;
 			children = (
-				D82A94EC17C3D50600CD9DCD /* TableFooterV.h */,
-				D82A94ED17C3D50600CD9DCD /* TableFooterV.m */,
-				D82A94EE17C3D50600CD9DCD /* TableFooterV.xib */,
-				D82A94EF17C3D50600CD9DCD /* TableHeaderV.h */,
-				D82A94F017C3D50600CD9DCD /* TableHeaderV.m */,
-				D82A94F117C3D50600CD9DCD /* TableHeaderV.xib */,
+				5AFC445C1A3943CD00728850 /* TableFooterV.h */,
+				5AFC445D1A3943CD00728850 /* TableFooterV.m */,
+				5AFC445E1A3943CD00728850 /* TableFooterV.xib */,
+				5AFC445F1A3943CD00728850 /* TableHeaderV.h */,
+				5AFC44601A3943CD00728850 /* TableHeaderV.m */,
+				5AFC44611A3943CD00728850 /* TableHeaderV.xib */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
 		};
-		D82A94F217C3D50600CD9DCD /* SlimeRefresh */ = {
+		5AFC44621A3943CD00728850 /* SlimeRefresh */ = {
 			isa = PBXGroup;
 			children = (
-				D82A94F317C3D50600CD9DCD /* sr_refresh.png */,
-				D82A94F417C3D50600CD9DCD /* sr_refresh@2X.png */,
-				D82A94F517C3D50600CD9DCD /* SRDefine.h */,
-				D82A94F617C3D50600CD9DCD /* SRRefreshView.h */,
-				D82A94F717C3D50600CD9DCD /* SRRefreshView.m */,
-				D82A94F817C3D50600CD9DCD /* SRSlimeView.h */,
-				D82A94F917C3D50600CD9DCD /* SRSlimeView.m */,
+				5AFC44631A3943CD00728850 /* sr_refresh.png */,
+				5AFC44641A3943CD00728850 /* sr_refresh@2X.png */,
+				5AFC44651A3943CD00728850 /* SRDefine.h */,
+				5AFC44661A3943CD00728850 /* SRRefreshView.h */,
+				5AFC44671A3943CD00728850 /* SRRefreshView.m */,
+				5AFC44681A3943CD00728850 /* SRSlimeView.h */,
+				5AFC44691A3943CD00728850 /* SRSlimeView.m */,
 			);
 			path = SlimeRefresh;
 			sourceTree = "<group>";
@@ -176,7 +177,7 @@
 				D82A950917C3DF6300CD9DCD /* BaseTableView.m */,
 				18CCF07E186C222F003A1A70 /* BaseTableView1.h */,
 				18CCF07F186C222F003A1A70 /* BaseTableView1.m */,
-				D82A94EA17C3D50600CD9DCD /* lib */,
+				5AFC445A1A3943CD00728850 /* lib */,
 				D83C835F16E506950065BEEB /* Supporting Files */,
 			);
 			path = ZYQTableVDemo;
@@ -247,14 +248,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFC44701A3943CD00728850 /* sr_refresh.png in Resources */,
+				5AFC44711A3943CD00728850 /* sr_refresh@2X.png in Resources */,
 				D83C836316E506950065BEEB /* InfoPlist.strings in Resources */,
+				5AFC446D1A3943CD00728850 /* TableFooterV.xib in Resources */,
 				D83C836B16E506950065BEEB /* Default.png in Resources */,
 				D83C836D16E506950065BEEB /* Default@2x.png in Resources */,
+				5AFC446F1A3943CD00728850 /* TableHeaderV.xib in Resources */,
 				D83C836F16E506950065BEEB /* Default-568h@2x.png in Resources */,
-				D82A94FD17C3D50600CD9DCD /* TableFooterV.xib in Resources */,
-				D82A94FF17C3D50600CD9DCD /* TableHeaderV.xib in Resources */,
-				D82A950017C3D50600CD9DCD /* sr_refresh.png in Resources */,
-				D82A950117C3D50600CD9DCD /* sr_refresh@2X.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -265,18 +266,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AFC44721A3943CD00728850 /* SRRefreshView.m in Sources */,
 				D83C836516E506950065BEEB /* main.m in Sources */,
+				5AFC44731A3943CD00728850 /* SRSlimeView.m in Sources */,
 				D83C836916E506950065BEEB /* AppDelegate.m in Sources */,
 				D83C837716E506AB0065BEEB /* ViewController.m in Sources */,
 				18CCF07D186C2109003A1A70 /* MyTableView1.m in Sources */,
-				D82A94FC17C3D50600CD9DCD /* TableFooterV.m in Sources */,
 				18CCF080186C222F003A1A70 /* BaseTableView1.m in Sources */,
-				D82A94FE17C3D50600CD9DCD /* TableHeaderV.m in Sources */,
-				D82A950217C3D50600CD9DCD /* SRRefreshView.m in Sources */,
-				D82A950317C3D50600CD9DCD /* SRSlimeView.m in Sources */,
+				5AFC44741A3943CD00728850 /* ZYQTableView.m in Sources */,
 				18CCF07A186C2083003A1A70 /* ViewController1.m in Sources */,
-				D82A950417C3D50600CD9DCD /* ZYQTableView.m in Sources */,
 				D82A950A17C3DF6300CD9DCD /* BaseTableView.m in Sources */,
+				5AFC446C1A3943CD00728850 /* TableFooterV.m in Sources */,
+				5AFC446E1A3943CD00728850 /* TableHeaderV.m in Sources */,
 				D82A950D17C3E18900CD9DCD /* MyTableView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

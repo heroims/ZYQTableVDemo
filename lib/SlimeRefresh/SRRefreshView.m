@@ -161,7 +161,7 @@
             _unmissSlime = NO;
         }
     }else {
-        
+
         [_activityIndicatorView stopAnimating];
         _slime.hidden = NO;
         _refleshView.hidden = NO;
@@ -268,7 +268,7 @@
         if (_slimeMissWhenGoingBack) self.alpha = -(p.y + _upInset) / _sizeHeight;
     }
 
-    _lblTime.frame = CGRectMake(0, (self.frame.size.height>_sizeHeight?self.frame.size.height-(_sizeHeight-_dragingHeight)-_upInset:self.frame.size.height-(_sizeHeight-_dragingHeight))+([UIScreen mainScreen].bounds.size.height==480?2:1), 320, _sizeHeight-_dragingHeight);
+    _lblTime.frame = CGRectMake(0, (self.frame.size.height>_sizeHeight?self.frame.size.height-(_sizeHeight-_dragingHeight)-_upInset:self.frame.size.height-(_sizeHeight-_dragingHeight))+([UIScreen mainScreen].bounds.size.height==480?2:1), self.frame.size.width, _sizeHeight-_dragingHeight);
 }
 
 - (void)scrollViewDidEndDraging
@@ -343,9 +343,9 @@
     NSCalendar *calendar = [NSCalendar currentCalendar];
     NSDateComponents *components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit
                                                fromDate:date toDate:[NSDate date] options:0];
-    int year = [components year];
-    int month = [components month];
-    int day = [components day];
+    int year = (int)[components year];
+    int month = (int)[components month];
+    int day = (int)[components day];
     if (year == 0 && month == 0 && day < 3) {
         if (day == 0) {
             title = @"今天";
