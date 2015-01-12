@@ -341,7 +341,7 @@
     NSString *dateString = [df stringFromDate:date];
     NSString *title = @"今天";
     NSCalendar *calendar = [NSCalendar currentCalendar];
-    NSDateComponents *components = [calendar components:NSYearCalendarUnit|NSMonthCalendarUnit|NSDayCalendarUnit
+    NSDateComponents *components = [calendar components:NSCalendarUnitYear|NSCalendarUnitMonth|NSCalendarUnitDay
                                                fromDate:date toDate:[NSDate date] options:0];
     int year = (int)[components year];
     int month = (int)[components month];
